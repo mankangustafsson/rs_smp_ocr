@@ -1,0 +1,7 @@
+mineru==3.1.1
+pyyaml
+beautifulsoup4
+markdown-it-py
+mdit-py-plugins
+playwright
+pymupdf

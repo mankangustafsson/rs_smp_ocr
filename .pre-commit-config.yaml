@@ -1,0 +1,11 @@
+# Runs the same checks as ci/check.py before every commit.
+# Install once per clone:  pre-commit install
+repos:
+  - repo: local
+    hooks:
+      - id: ci-checks
+        name: ci/check.py (ruff + mypy)
+        entry: python ci/check.py
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]

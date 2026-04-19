@@ -1,0 +1,50 @@
+volumes:
+  - id: band-1
+    folder: sources/band-1
+    kind: service-manual
+    title_en: "SMP Service Manual — Band 1"
+    title_de: "SMP Servicehandbuch — Band 1"
+    language: de+en
+    stock_number: "1035.5005.02/03/04/22"
+    apply_chapter_template: true
+
+  - id: band-2
+    folder: sources/band-2
+    kind: service-manual
+    title_en: "SMP Service Manual — Band 2"
+    title_de: "SMP Servicehandbuch — Band 2"
+    language: de+en
+    apply_chapter_template: true
+
+  - id: band-3
+    folder: sources/band-3
+    kind: service-manual
+    title_en: "SMP Service Manual — Band 3"
+    title_de: "SMP Servicehandbuch — Band 3"
+    language: de+en
+    apply_chapter_template: true
+
+  - id: band-4
+    folder: sources/band-4
+    kind: service-manual
+    title_en: "SMP Service Manual — Band 4"
+    title_de: "SMP Servicehandbuch — Band 4"
+    language: de+en
+    apply_chapter_template: true
+
+  - id: user-manual
+    folder: sources/user-manual          # moved from smp_08_e
+    kind: user-manual
+    title_en: "SMP Operating Manual"
+    title_de: null                       # DE counterpart (smp_08_d) not in corpus
+    language: en                         # change to de+en if smp_08_d is added later
+    apply_chapter_template: true         # chapters in toc_overrides.yaml
+
+  - id: datasheet
+    folder: sources/datasheet
+    kind: datasheet
+    title_en: "SMP Microwave Signal Generator — Data Sheet"
+    title_de: null
+    language: en
+    apply_chapter_template: true    # chapters in toc_overrides.yaml
+

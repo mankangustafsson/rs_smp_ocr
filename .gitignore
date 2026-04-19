@@ -1,0 +1,10 @@
+output/
+sources/
+rs_smp_corpus/
+*.pdf
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+_pdfs_verification.md

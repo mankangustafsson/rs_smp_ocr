@@ -1,0 +1,172 @@
+@page {
+    size: A4;
+    margin: 20mm 18mm 22mm 18mm;
+}
+
+html {
+    font-size: 10pt;
+}
+
+body {
+    font-family: "Source Serif Pro", "Georgia", "Times New Roman", serif;
+    line-height: 1.45;
+    color: #111;
+    margin: 0;
+}
+
+.cover {
+    page-break-after: always;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.cover h1 {
+    font-size: 28pt;
+    border: 0;
+    margin-bottom: 12pt;
+}
+
+.cover .subtitle {
+    font-size: 14pt;
+    color: #555;
+}
+
+section.page {
+    page-break-before: always;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #111;
+    font-weight: 700;
+    page-break-after: avoid;
+}
+
+h1 {
+    font-size: 18pt;
+    border-bottom: 1px solid #888;
+    padding-bottom: 3pt;
+    margin: 0 0 0.4em 0;
+}
+
+h2 {
+    font-size: 14pt;
+    margin: 1.1em 0 0.35em 0;
+}
+
+h3 {
+    font-size: 12pt;
+    margin: 1.0em 0 0.3em 0;
+}
+
+h4 {
+    font-size: 11pt;
+    margin: 0.9em 0 0.25em 0;
+}
+
+h5, h6 {
+    font-size: 10pt;
+    margin: 0.8em 0 0.2em 0;
+}
+
+p {
+    margin: 0.4em 0;
+    orphans: 3;
+    widows: 3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+}
+
+figure {
+    margin: 0.8em 0;
+    page-break-inside: avoid;
+}
+
+figcaption {
+    font-size: 9pt;
+    color: #555;
+    font-style: italic;
+    margin-top: 0.2em;
+}
+
+figure.inlined-table {
+    page-break-inside: auto;
+}
+
+figure.inlined-table figcaption {
+    margin-bottom: 0.3em;
+    font-style: normal;
+    font-weight: 600;
+    color: #333;
+}
+
+figure.inlined-figure {
+    text-align: center;
+    margin: 0.8em 0;
+}
+
+figure.inlined-figure img {
+    max-width: 100%;
+    max-height: 22cm;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.6em 0;
+    font-size: 9pt;
+    page-break-inside: avoid;
+}
+
+th, td {
+    border: 0.5pt solid #888;
+    padding: 3pt 5pt;
+    vertical-align: top;
+    text-align: left;
+}
+
+th {
+    background: #f0f0f0;
+    font-weight: 700;
+}
+
+/* OCR'd tables often lack <th>; treat the first row as the header. */
+table tr:first-child td {
+    background: #f0f0f0;
+    font-weight: 700;
+}
+
+code, pre {
+    font-family: "Cascadia Mono", "Consolas", "Courier New", monospace;
+    font-size: 9pt;
+}
+
+pre {
+    background: #f6f6f6;
+    padding: 6pt 8pt;
+    border: 0.5pt solid #ddd;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    page-break-inside: avoid;
+}
+
+blockquote {
+    border-left: 2pt solid #bbb;
+    padding-left: 10pt;
+    color: #444;
+    margin: 0.6em 0;
+}
+
+hr {
+    border: 0;
+    border-top: 0.5pt solid #bbb;
+    margin: 0.8em 0;
+}
+
+a { color: #1a4c8a; text-decoration: none; }

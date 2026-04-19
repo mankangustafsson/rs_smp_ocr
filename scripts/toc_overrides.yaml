@@ -1,0 +1,254 @@
+# TOC overrides for SMP volumes.
+#
+# Module names were derived from the "Testing and Repair of Modules" master
+# TOCs that appear at the front of each Band (in content_list.json near the
+# volume start) plus the "6.1.x A-designator" list at band-1 line ~10083.
+#
+# Structure per volume:
+#   chapters:
+#     - number: <int>
+#       page_start: <int>          # 0-based page_idx in MinerU output
+#       page_end:   <int | null>   # null means "to end of volume"
+#       title_en:   <string>
+#       title_de:   <string | null>
+#       module:     <stock-or-designator>   # informational only
+
+band-1:
+  # Master TOC (Register list): Front Module VAR 02 / VAR 04 / VAR 06, plus
+  # A8 Digital Synthesis. Band-1 also contains the two-language Chapter 6
+  # overview of the entire SMP repair philosophy.
+  chapters:
+  - number: 1
+    page_start: 22
+    page_end: 85
+    title_de: "Kap.6 Instandsetzung des SMP — Übersicht (DE)"
+    title_en: "Ch.6 Repair of the SMP — Overview (German)"
+  - number: 2
+    page_start: 86
+    page_end: 159
+    title_de: "Kap.6 Instandsetzung des SMP — Übersicht (EN)"
+    title_en: "Ch.6 Repair of the SMP — Overview (English)"
+  - number: 3
+    page_start: 160
+    page_end: 213
+    title_de: "Kap.7 A3 Front Module with Controller VAR 02 (Processor 80960SB-16)"
+    title_en: "Ch.7 A3 Front Module with Controller VAR 02 (Processor 80960SB-16)"
+    module: "1035.7308.01"
+  - number: 4
+    page_start: 214
+    page_end: 283
+    title_de: "Kap.7 A3 Front Module with Controller VAR 04"
+    title_en: "Ch.7 A3 Front Module with Controller VAR 04"
+    module: "1035.7250.01"
+  - number: 5
+    page_start: 284
+    page_end: 335
+    title_de: "Kap.7 A3 Front Module with Controller VAR 06"
+    title_en: "Ch.7 A3 Front Module with Controller VAR 06"
+    module: "1035.7766.01"
+  - number: 6
+    page_start: 336
+    page_end: null
+    title_de: "Kap.7 A8 Digital Synthesis (Direkte Digitale Synthese)"
+    title_en: "Ch.7 A8 Digital Synthesis (Direct Digital Synthesis)"
+    module: "1038.7344.01"
+
+band-2:
+  # Master TOC: A6 FM/PM Modulator (SM-B5), A7 Reference/Step Synthesis,
+  # A10 YIG PLL, A9 ALC Amplifier (two stock variants).
+  chapters:
+  - number: 1
+    page_start: 22
+    page_end: 79
+    title_de: "Kap.7 A6 FM/ΦM-Modulator (Option SM-B5)"
+    title_en: "Ch.7 A6 FM/ΦM Modulator (Option SM-B5)"
+    module: "1036.8508.01"
+  - number: 2
+    page_start: 80
+    page_end: 137
+    title_de: "Kap.7 A7 Referenz-/Schrittsynthese"
+    title_en: "Ch.7 A7 Reference / Step Synthesis"
+    module: "1035.6501.01"
+  - number: 3
+    page_start: 138
+    page_end: 189
+    title_de: "Kap.7 A10 YIG-PLL"
+    title_en: "Ch.7 A10 YIG PLL"
+    module: "1035.7108.01"
+  - number: 4
+    page_start: 190
+    page_end: 245
+    title_de: "Kap.7 A9 ALC-Verstärker (Variante 1035.6301.02)"
+    title_en: "Ch.7 A9 ALC Amplifier (Variant 1035.6301.02)"
+    module: "1035.6301.01"
+  - number: 5
+    page_start: 246
+    page_end: null
+    title_de: "Kap.7 A9 ALC-Verstärker (Variante 1035.6199.02)"
+    title_en: "Ch.7 A9 ALC Amplifier (Variant 1035.6199.02)"
+    module: "1035.6199.01"
+
+band-3:
+  # Master TOC: 8 registers, matched 1:1 to 8 chapters below. Register 6
+  # (Frequency Doubler) has no text_level:2 heading in the OCR; its start
+  # page (216) was found by locating the "Verdoppler 27 GHz" title near
+  # stock 1044.7507.02.
+  chapters:
+  - number: 1
+    page_start: 22
+    page_end: 93
+    title_de: "Kap.7 A26 Mikrowellen-Interface"
+    title_en: "Ch.7 A26 Microwave Interface"
+    module: "1035.9800.01"
+  - number: 2
+    page_start: 94
+    page_end: 131
+    title_de: "Kap.7 A20 YFO-Modul"
+    title_en: "Ch.7 A20 YFO Module"
+    module: "1036.4502.00"
+  - number: 3
+    page_start: 132
+    page_end: 161
+    title_de: "Kap.7 A21 Sampling-Modul"
+    title_en: "Ch.7 A21 Sampling Module"
+    module: "1035.8840.01"
+  - number: 4
+    page_start: 162
+    page_end: 193
+    title_de: "Kap.7 A15/A16 Richtkoppler / Detektor 27/40 GHz"
+    title_en: "Ch.7 A15/A16 Directional Coupler / Detector 27/40 GHz"
+    module: "1035.9330.01"
+  - number: 5
+    page_start: 194
+    page_end: 215
+    title_de: "Kap.7 A24 Leistungsverstärker 20 GHz"
+    title_en: "Ch.7 A24 Power Amplifier 20 GHz"
+    module: "1036.0720.02"
+  - number: 6
+    page_start: 216
+    page_end: 227
+    # No en_start_page: this chapter has a DE function description and an
+    # English cover page only; the remaining pages are schematics. Keeping
+    # it as one combined section avoids producing an EN file with no real
+    # English body.
+    title_de: "Kap.7 A25/A27 Frequenzverdoppler 27/40 GHz"
+    title_en: "Ch.7 A25/A27 Frequency Doubler 27/40 GHz"
+    module: "1044.7507.02"
+  - number: 7
+    page_start: 228
+    page_end: 259
+    title_de: "Kap.7 A22 Frequenzerweiterung 0,01…2 GHz (Option SMP-B11)"
+    title_en: "Ch.7 A22 Frequency Extension 0.01 to 2 GHz (Option SMP-B11)"
+    module: "1036.6240.02"
+  - number: 8
+    page_start: 260
+    page_end: null
+    title_de: "Kap.7 A18 Pulsmodulator 2…20/27/40 GHz (Option SMP-B12)"
+    title_en: "Ch.7 A18 Pulse Modulator 2 to 20/27/40 GHz (Option SMP-B12)"
+    module: "1036.5750.01"
+
+band-4:
+  # Master TOC: 7 registers. My auto-detector missed Register 6 (OCXO) and
+  # Register 7 (Power Supply) because their "7.1 Funktionsbeschreibung"
+  # headings aren't marked text_level:2. Page boundaries below found by
+  # manual inspection of content_list.json: OCXO starts p.178, Power Supply
+  # starts p.206.
+  chapters:
+  - number: 1
+    page_start: 22
+    page_end: 51
+    title_de: "Kap.7 A23 Pulsmodulator 0,01…2 GHz (Option SMP-B13)"
+    title_en: "Ch.7 A23 Pulse Modulator 0.01 to 2 GHz (Option SMP-B13)"
+    module: "1036.7201.01"
+  - number: 2
+    page_start: 52
+    page_end: 79
+    title_de: "Kap.7 A14 HF-Eichleitung 27/40 GHz (Option SMP-B15/B17)"
+    title_en: "Ch.7 A14 RF Attenuator 27/40 GHz (Option SMP-B15/B17)"
+    module: "1036.5250.02"
+  - number: 3
+    page_start: 80
+    page_end: 111
+    title_de: "Kap.7 A4 Pulsgenerator (Option SMP-B14)"
+    title_en: "Ch.7 A4 Pulse Generator (Option SMP-B14)"
+    module: "1036.9333.01"
+  - number: 4
+    page_start: 112
+    page_end: 147
+    title_de: "Kap.7 A5 LF-Generator (Option SM-B2)"
+    title_en: "Ch.7 A5 LF Generator (Option SM-B2)"
+    module: "1036.7960.01"
+  - number: 5
+    page_start: 148
+    page_end: 177
+    title_de: "Kap.7 A13 Auxiliary Interface (Option SMP-B18)"
+    title_en: "Ch.7 A13 Auxiliary Interface (Option SMP-B18)"
+    module: "1036.8950.01"
+  - number: 6
+    page_start: 178
+    page_end: 205
+    title_de: "Kap.7 A71 Referenzoszillator OCXO (Option SM-B1)"
+    title_en: "Ch.7 A71 Reference Oscillator OCXO (Option SM-B1)"
+    module: "1036.7618.01"
+  - number: 7
+    page_start: 206
+    page_end: null
+    en_start_page: 222                 # EN heading not text_level:2; pinned manually
+    title_de: "Kap.7 A2 Schaltnetzteil"
+    title_en: "Ch.7 A2 Switching Power Supply"
+    module: null
+
+user-manual:
+  chapters:
+  - number: 1
+    page_start: 28
+    page_end: 37
+    title_en: Preparation for Use
+    title_de: null
+  - number: 2
+    page_start: 38
+    page_end: 137
+    title_en: Operation
+    title_de: null
+  - number: 3
+    page_start: 138
+    page_end: 225
+    title_en: Remote Control
+    title_de: null
+  - number: 4
+    page_start: 226
+    page_end: 229
+    title_en: Maintenance and Troubleshooting
+    title_de: null
+  - number: 5
+    page_start: 230
+    page_end: 255
+    title_en: Testing the Rated Specifications
+    title_de: null
+  - number: 6
+    page_start: 256
+    page_end: null
+    title_en: "Annex A — IEC/IEEE Bus Interface"
+    title_de: null
+
+datasheet:
+  # Auto-detection treats every marketing bullet as its own chapter. The
+  # datasheet really has three sections: a feature/overview front matter,
+  # the Specifications table, and Ordering information.
+  chapters:
+  - number: 1
+    page_start: 0
+    page_end: 7
+    title_en: "Product Overview and Features"
+    title_de: null
+  - number: 2
+    page_start: 8
+    page_end: 12
+    title_en: "Specifications"
+    title_de: null
+  - number: 3
+    page_start: 13
+    page_end: null
+    title_en: "Ordering Information"
+    title_de: null
+

@@ -1,0 +1,5 @@
+ruff
+mypy
+types-PyYAML
+types-beautifulsoup4
+pre-commit
