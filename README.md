@@ -81,6 +81,11 @@ folder with `volumes/` (sections, tables, figures, pages) and `index/`
 (cross-cutting indexes) as subdirectories — a derived artifact that is
 self-contained enough to zip and move as-is.
 
+## Related Projects
+
+- [**rs_smp_tools**](https://github.com/mankangustafsson/rs_smp_tools) — GPIB control and functional testing for the SMP02 signal generator
+- [**rs_smp_a21_repair**](https://github.com/mankangustafsson/rs_smp_a21_repair) — KiCAD files for A21 PA stage replacement board
+
 ## Diagnostics
 
 Read-only inspection tools live under `scripts/diagnostics/`; none are part
