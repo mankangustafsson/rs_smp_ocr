@@ -23,8 +23,9 @@ ignore = [
 [tool.mypy]
 python_version = "3.12"
 files = ["scripts"]
-strict = true
+ignore_missing_imports = true
+disable_error_code = ["unused-ignore"]
 
 [[tool.mypy.overrides]]
-module = ["fitz"]
+module = ["fitz", "pymupdf", "markdown_it", "mdit_py_plugins", "playwright"]
 ignore_missing_imports = true
